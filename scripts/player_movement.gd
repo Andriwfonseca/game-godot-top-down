@@ -30,11 +30,15 @@ func start_attack(base_anim: String) -> void:
 	# Ativa a hitbox do ataque
 	attack_area.monitoring = true
 
-	anim.animation_finished.connect(_on_attack_finished, CONNECT_ONE_SHOT)
+	# Conecta o sinal de frame_changed apenas durante o ataque
+	anim.frame_changed.connect(Callable(self, "_on_attack_frame_changed"))
 
-func _on_attack_finished() -> void:
-	attacking = false
-	attack_area.monitoring = false
+func _on_attack_frame_changed() -> void:
+	# Se chegou no 4º frame (índice 3)
+	if anim.frame == 3:
+		attacking = false
+		attack_area.monitoring = false
+
 
 func _on_attack_area_body_entered(body: Node) -> void:
 	# LOG para depuração
