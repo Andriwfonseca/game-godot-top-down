@@ -1,6 +1,6 @@
 [gd_scene load_steps=149 format=3 uid="uid://bkc7semstpwdo"]
 
-[ext_resource type="Script" uid="uid://4l770ar33xla" path="res://scripts/player_movement.gd" id="1_p0vlq"]
+[ext_resource type="Script" uid="uid://4l770ar33xla" path="res://scripts/player.gd" id="1_p0vlq"]
 [ext_resource type="Texture2D" uid="uid://k0pkeehojbye" path="res://assets/Player/IDLE/idle_down.png" id="2_bruh7"]
 [ext_resource type="Texture2D" uid="uid://b76xvwltlvcy4" path="res://assets/Player/ATTACK_1/attack1_down.png" id="2_jfpux"]
 [ext_resource type="Texture2D" uid="uid://dagyykjdxwkpw" path="res://assets/Player/IDLE/idle_left.png" id="3_6eyey"]
@@ -1012,7 +1012,7 @@ shape = SubResource("RectangleShape2D_5q5h1")
 debug_color = Color(0.492273, 0.583748, 1.92523e-07, 0.42)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-z_index = 1
+z_index = 5
 scale = Vector2(0.85, 0.85)
 sprite_frames = SubResource("SpriteFrames_im07a")
 animation = &"attack2_up"

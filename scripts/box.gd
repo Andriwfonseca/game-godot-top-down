@@ -17,8 +17,18 @@ func kick(direction: Vector2) -> void:
 
 func _physics_process(delta: float) -> void:
 	if is_moving:
-		print_debug("esta movendo", velocity)
+		print_debug("esta movendo", velocity)		
 		var collision = move_and_collide(velocity * delta)
 		if collision:
 			velocity = Vector2.ZERO
 			is_moving = false
+			
+			# empurra 1px para o lado oposto da direção
+			if(move_direction.x > 0):
+				position.x = position.x - 1
+			elif(move_direction.x < 0):
+				position.x = position.x + 1
+			elif(move_direction.y > 0):
+				position.y = position.y - 1
+			elif(move_direction.y < 0):
+				position.y = position.y + 1

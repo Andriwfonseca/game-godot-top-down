@@ -10,6 +10,8 @@ extends CharacterBody2D
 var last_direction: String = "down" # guarda última direção
 var attacking: bool = false         # trava o movimento enquanto ataca
 
+var respawn_position: Vector2
+
 # ----------------- Ataque -----------------
 func update_attack_area_position() -> void:
 	match last_direction:
@@ -64,7 +66,8 @@ func _on_attack_area_area_entered(area: Area2D) -> void:
 # ----------------- Ciclo de Vida -----------------
 func _ready() -> void:
 	attack_area.monitoring = false
-	attack_area.connect("area_entered", Callable(self, "_on_attack_area_area_entered"))
+	attack_area.connect("area_entered", Callable(self, "_on_attack_area_area_entered"))	
+	respawn_position = global_position # posição inicial
 
 # ----------------- Movimento -----------------
 func _physics_process(delta: float) -> void:
@@ -100,3 +103,12 @@ func _physics_process(delta: float) -> void:
 		start_attack("attack2_")
 
 	update_attack_area_position()
+
+
+func _on_area_2d_body_entered(body: Node) -> void:
+	if body.is_in_group("player"):
+		var respawn_pos = global_position + Vector2(0, 2) # +2 no Y
+		print("Checkpoint ativado! Novo respawn:", respawn_pos)
+		body.respawn_position = respawn_pos
+		get_tree().reload_current_scene()
+	
