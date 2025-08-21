@@ -1,9 +1,10 @@
-[gd_scene load_steps=35 format=4 uid="uid://dsip705ck78mp"]
+[gd_scene load_steps=46 format=4 uid="uid://dsip705ck78mp"]
 
 [ext_resource type="Texture2D" uid="uid://ldu0iu7keexa" path="res://assets/Tiles/decorative_cracks_floor.png" id="1_w7c3h"]
 [ext_resource type="Texture2D" uid="uid://c7iqxc7gosaxj" path="res://assets/Tiles/walls_floor.png" id="2_w8frs"]
 [ext_resource type="PackedScene" uid="uid://bkc7semstpwdo" path="res://scenes/Player.tscn" id="3_w8frs"]
 [ext_resource type="PackedScene" uid="uid://bsltaxaxjmsc8" path="res://scenes/box.tscn" id="4_mx8sn"]
+[ext_resource type="Texture2D" uid="uid://u6aniqghiy27" path="res://assets/Levels/level-1.png" id="5_ppgk2"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_mx8sn"]
 tile_data = PackedInt32Array(0, 65539, 7, 65536, 65539, 8, 131072, 65539, 8, 196608, 65539, 8, 262144, 65539, 8, 327680, 65539, 8, 393216, 65539, 8, 458752, 65539, 8, 524288, 65539, 8, 589824, 65539, 8, 655360, 65539, 9, 720896, 65539, 10, 1, 131075, 7, 65537, 131075, 8, 131073, 131075, 8, 196609, 131075, 8, 262145, 131075, 8, 327681, 131075, 8, 393217, 131075, 8, 458753, 131075, 8, 524289, 131075, 8, 589825, 131075, 8, 655361, 131075, 9, 720897, 131075, 10, 2, 131075, 7, 65538, 131075, 8, 131074, 131075, 8, 196610, 131075, 8, 262146, 131075, 8, 327682, 131075, 8, 393218, 131075, 8, 458754, 131075, 8, 524290, 131075, 8, 589826, 131075, 8, 655362, 131075, 9, 720898, 131075, 10, 3, 131075, 7, 65539, 131075, 8, 131075, 131075, 8, 196611, 131075, 8, 262147, 131075, 8, 327683, 131075, 8, 393219, 131075, 8, 458755, 131075, 8, 524291, 131075, 8, 589827, 131075, 8, 655363, 131075, 9, 720899, 131075, 10, 4, 131075, 7, 65540, 131075, 8, 131076, 131075, 8, 196612, 131075, 8, 262148, 131075, 8, 327684, 131075, 8, 393220, 131075, 8, 458756, 131075, 8, 524292, 131075, 8, 589828, 131075, 8, 655364, 131075, 9, 720900, 131075, 10, 5, 131075, 7, 65541, 131075, 8, 131077, 131075, 8, 196613, 131075, 8, 262149, 131075, 8, 327685, 131075, 8, 393221, 131075, 8, 458757, 131075, 8, 524293, 131075, 8, 589829, 131075, 8, 655365, 131075, 9, 720901, 131075, 10, 6, 131075, 7, 65542, 131075, 8, 131078, 131075, 8, 196614, 131075, 8, 262150, 131075, 8, 327686, 131075, 8, 393222, 131075, 8, 458758, 131075, 8, 524294, 131075, 8, 589830, 131075, 8, 655366, 131075, 9, 720902, 131075, 10, 7, 131075, 7, 65543, 131075, 8, 131079, 131075, 8, 196615, 131075, 8, 262151, 131075, 8, 327687, 131075, 8, 393223, 131075, 8, 458759, 131075, 8, 524295, 131075, 8, 589831, 131075, 8, 655367, 131075, 9, 720903, 131075, 10, 8, 131075, 7, 65544, 131075, 8, 131080, 131075, 8, 196616, 131075, 8, 262152, 131075, 8, 327688, 131075, 8, 393224, 131075, 8, 458760, 131075, 8, 524296, 131075, 8, 589832, 131075, 8, 655368, 131075, 9, 720904, 131075, 10, 9, 131075, 7, 65545, 131075, 8, 131081, 131075, 8, 196617, 131075, 8, 262153, 131075, 8, 327689, 131075, 8, 393225, 131075, 8, 458761, 131075, 8, 524297, 131075, 8, 589833, 131075, 8, 655369, 131075, 9, 720905, 131075, 10, 10, 131075, 7, 65546, 131075, 8, 131082, 131075, 8, 196618, 131075, 8, 262154, 131075, 8, 327690, 131075, 8, 393226, 131075, 8, 458762, 131075, 8, 524298, 131075, 8, 589834, 131075, 8, 655370, 131075, 9, 720906, 131075, 10, 11, 131075, 7, 65547, 131075, 8, 131083, 131075, 8, 196619, 131075, 8, 262155, 131075, 8, 327691, 131075, 8, 393227, 131075, 8, 458763, 131075, 8, 524299, 131075, 8, 589835, 131075, 8, 655371, 131075, 9, 720907, 131075, 10, 12, 131075, 7, 65548, 131075, 8, 131084, 131075, 8, 196620, 131075, 8, 262156, 131075, 8, 327692, 131075, 8, 393228, 131075, 8, 458764, 131075, 8, 524300, 131075, 8, 589836, 131075, 8, 655372, 131075, 9, 720908, 131075, 10, 13, 131075, 7, 65549, 131075, 8, 131085, 131075, 8, 196621, 131075, 8, 262157, 131075, 8, 327693, 131075, 8, 393229, 131075, 8, 458765, 131075, 8, 524301, 131075, 8, 589837, 131075, 8, 655373, 131075, 9, 720909, 131075, 10, 14, 196611, 7, 65550, 196611, 8, 131086, 196611, 8, 196622, 196611, 8, 262158, 196611, 8, 327694, 196611, 8, 393230, 196611, 8, 458766, 196611, 8, 524302, 196611, 8, 589838, 196611, 8, 655374, 196611, 9, 720910, 196611, 10)
@@ -478,6 +479,27 @@ size = Vector2(18, 94)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8gofh"]
 size = Vector2(18, 94)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xy2fk"]
+size = Vector2(18, 95)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cmcjb"]
+size = Vector2(47.4999, 15.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_556r4"]
+size = Vector2(30, 13.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7agi7"]
+size = Vector2(13.75, 13.875)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kih21"]
+size = Vector2(15.4999, 29.875)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w3o6u"]
+size = Vector2(15.75, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2e2fo"]
+size = Vector2(47.4999, 13.75)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h6wmr"]
 size = Vector2(4, 71)
 
@@ -486,6 +508,15 @@ size = Vector2(4, 43.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5k0ak"]
 size = Vector2(18, 43.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gur6y"]
+size = Vector2(10, 260)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v3why"]
+size = Vector2(18, 112)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_asl66"]
+size = Vector2(204, 15.9999)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wu01b"]
 size = Vector2(18, 236)
@@ -527,9 +558,11 @@ tile_map_data = PackedByteArray("AAAAAAAAAwABAAcAAAAAAAEAAwABAAgAAAAAAAIAAwABAAg
 tile_set = SubResource("TileSet_8c41q")
 
 [node name="Player" parent="." instance=ExtResource("3_w8frs")]
-position = Vector2(138, 117)
+position = Vector2(678, 212)
 
 [node name="Colliders" type="StaticBody2D" parent="."]
+z_index = 5
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Colliders"]
 position = Vector2(2, 88)
@@ -584,6 +617,96 @@ rotation = 1.5708
 shape = SubResource("RectangleShape2D_8gofh")
 debug_color = Color(0.643137, 0.988235, 0.298039, 0.419608)
 
+[node name="CollisionShape2D40" type="CollisionShape2D" parent="Colliders"]
+position = Vector2(608.5, 39)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_xy2fk")
+debug_color = Color(0.643137, 0.988235, 0.298039, 0.419608)
+
+[node name="CollisionShape2D41" type="CollisionShape2D" parent="Colliders"]
+position = Vector2(738, 40)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_xy2fk")
+debug_color = Color(0.643137, 0.988235, 0.298039, 0.419608)
+
+[node name="CollisionShape2D42" type="CollisionShape2D" parent="Colliders"]
+position = Vector2(777.75, 56.5001)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_cmcjb")
+debug_color = Color(0.643137, 0.988235, 0.298039, 0.419608)
+
+[node name="CollisionShape2D43" type="CollisionShape2D" parent="Colliders"]
+position = Vector2(696, 56.25)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_cmcjb")
+debug_color = Color(0.643137, 0.988235, 0.298039, 0.419608)
+
+[node name="CollisionShape2D52" type="CollisionShape2D" parent="Colliders"]
+position = Vector2(760.875, 129)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_556r4")
+debug_color = Color(0.643137, 0.988235, 0.298039, 0.419608)
+
+[node name="CollisionShape2D46" type="CollisionShape2D" parent="Colliders"]
+position = Vector2(695.875, 104)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_7agi7")
+debug_color = Color(0.643137, 0.988235, 0.298039, 0.419608)
+
+[node name="CollisionShape2D47" type="CollisionShape2D" parent="Colliders"]
+position = Vector2(648, 104)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_7agi7")
+debug_color = Color(0.643137, 0.988235, 0.298039, 0.419608)
+
+[node name="CollisionShape2D53" type="CollisionShape2D" parent="Colliders"]
+position = Vector2(609.063, 72)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_kih21")
+debug_color = Color(0.643137, 0.988235, 0.298039, 0.419608)
+
+[node name="CollisionShape2D54" type="CollisionShape2D" parent="Colliders"]
+position = Vector2(672, 72.125)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_w3o6u")
+debug_color = Color(0.643137, 0.988235, 0.298039, 0.419608)
+
+[node name="CollisionShape2D48" type="CollisionShape2D" parent="Colliders"]
+position = Vector2(600, 120)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_7agi7")
+debug_color = Color(0.643137, 0.988235, 0.298039, 0.419608)
+
+[node name="CollisionShape2D49" type="CollisionShape2D" parent="Colliders"]
+position = Vector2(616, 152)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_7agi7")
+debug_color = Color(0.643137, 0.988235, 0.298039, 0.419608)
+
+[node name="CollisionShape2D50" type="CollisionShape2D" parent="Colliders"]
+position = Vector2(568, 136)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_7agi7")
+debug_color = Color(0.643137, 0.988235, 0.298039, 0.419608)
+
+[node name="CollisionShape2D51" type="CollisionShape2D" parent="Colliders"]
+position = Vector2(712.938, 152.875)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_7agi7")
+debug_color = Color(0.643137, 0.988235, 0.298039, 0.419608)
+
+[node name="CollisionShape2D44" type="CollisionShape2D" parent="Colliders"]
+position = Vector2(648.875, 56.25)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_2e2fo")
+debug_color = Color(0.643137, 0.988235, 0.298039, 0.419608)
+
+[node name="CollisionShape2D45" type="CollisionShape2D" parent="Colliders"]
+position = Vector2(569, 56)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_2e2fo")
+debug_color = Color(0.643137, 0.988235, 0.298039, 0.419608)
+
 [node name="CollisionShape2D29" type="CollisionShape2D" parent="Colliders"]
 position = Vector2(417.5, 354)
 rotation = 1.5708
@@ -618,6 +741,36 @@ debug_color = Color(0.643137, 0.988235, 0.298039, 0.419608)
 position = Vector2(392, -1.13687e-13)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_64w2a")
+debug_color = Color(0.643137, 0.988235, 0.298039, 0.419608)
+
+[node name="CollisionShape2D35" type="CollisionShape2D" parent="Colliders"]
+position = Vector2(674, 27)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_gur6y")
+debug_color = Color(0.643137, 0.988235, 0.298039, 0.419608)
+
+[node name="CollisionShape2D37" type="CollisionShape2D" parent="Colliders"]
+position = Vector2(606, 217)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_v3why")
+debug_color = Color(0.643137, 0.988235, 0.298039, 0.419608)
+
+[node name="CollisionShape2D38" type="CollisionShape2D" parent="Colliders"]
+position = Vector2(746, 217)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_v3why")
+debug_color = Color(0.643137, 0.988235, 0.298039, 0.419608)
+
+[node name="CollisionShape2D36" type="CollisionShape2D" parent="Colliders"]
+position = Vector2(552, 124)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_asl66")
+debug_color = Color(0.643137, 0.988235, 0.298039, 0.419608)
+
+[node name="CollisionShape2D39" type="CollisionShape2D" parent="Colliders"]
+position = Vector2(794, 124)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_asl66")
 debug_color = Color(0.643137, 0.988235, 0.298039, 0.419608)
 
 [node name="CollisionShape2D20" type="CollisionShape2D" parent="Colliders"]
@@ -725,7 +878,14 @@ position = Vector2(308, 52)
 position = Vector2(310, 122)
 
 [node name="Box3" parent="." instance=ExtResource("4_mx8sn")]
-position = Vector2(404, 52)
+position = Vector2(408, 56)
 
 [node name="Box4" parent="." instance=ExtResource("4_mx8sn")]
 position = Vector2(404, 122)
+
+[node name="Map2" type="Sprite2D" parent="."]
+position = Vector2(674, 112)
+texture = ExtResource("5_ppgk2")
+metadata/_edit_lock_ = true
+
+[node name="Camera2D" type="Camera2D" parent="Map2"]

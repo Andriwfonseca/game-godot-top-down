@@ -39,24 +39,32 @@ func _on_attack_frame_changed() -> void:
 		attacking = false
 		attack_area.monitoring = false
 
+func _on_attack_area_area_entered(area: Area2D) -> void:
+	# body aqui é o CollisionObject2D que entrou na área
+	# queremos garantir que é a Box
+	var box: CharacterBody2D = null
+	var body = area.get_parent()
 
-func _on_attack_area_body_entered(body: Node) -> void:
-	# LOG para depuração
-	print_debug("Hit detectado! Colidiu com: ", body.name)
+	if body.is_in_group("boxes"):  # assume que Box tem grupo "boxes"
+		box = body
+	elif body.get_parent() and body.get_parent().is_in_group("boxes"):
+		# caso body seja a Area2D interna (ColliderAttackArea)
+		box = body.get_parent()
 
-	if body.is_in_group("boxes"): # adicione sua Box no grupo "boxes"
+	if box:
 		var dir := Vector2.ZERO
 		match last_direction:
 			"up": dir = Vector2.UP
 			"down": dir = Vector2.DOWN
 			"left": dir = Vector2.LEFT
 			"right": dir = Vector2.RIGHT
-		body.kick(dir)
+
+		box.kick(dir)
 
 # ----------------- Ciclo de Vida -----------------
 func _ready() -> void:
 	attack_area.monitoring = false
-	attack_area.connect("body_entered", Callable(self, "_on_attack_area_body_entered"))
+	attack_area.connect("area_entered", Callable(self, "_on_attack_area_area_entered"))
 
 # ----------------- Movimento -----------------
 func _physics_process(delta: float) -> void:
