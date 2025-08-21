@@ -1,4 +1,3 @@
-# Box.gd
 extends CharacterBody2D
 
 @export var kick_speed: float = 250.0
@@ -17,18 +16,25 @@ func kick(direction: Vector2) -> void:
 
 func _physics_process(delta: float) -> void:
 	if is_moving:
-		print_debug("esta movendo", velocity)		
 		var collision = move_and_collide(velocity * delta)
 		if collision:
-			velocity = Vector2.ZERO
-			is_moving = false
-			
-			# empurra 1px para o lado oposto da direção
-			if(move_direction.x > 0):
-				position.x = position.x - 1
-			elif(move_direction.x < 0):
-				position.x = position.x + 1
-			elif(move_direction.y > 0):
-				position.y = position.y - 1
-			elif(move_direction.y < 0):
-				position.y = position.y + 1
+			# Verifica se colidiu com um target
+			var collider = collision.get_collider()
+			if collider and collider.is_in_group("targets"):
+				# Atravessa o target (não para)
+				print("Atravessando target: ", collider.name)
+				# Continua o movimento
+			else:
+				# Para apenas se não for um target
+				velocity = Vector2.ZERO
+				is_moving = false
+
+				# empurra 1px para o lado oposto da direção
+				if(move_direction.x > 0):
+					position.x = position.x - 1
+				elif(move_direction.x < 0):
+					position.x = position.x + 1
+				elif(move_direction.y > 0):
+					position.y = position.y - 1
+				elif(move_direction.y < 0):
+					position.y = position.y + 1

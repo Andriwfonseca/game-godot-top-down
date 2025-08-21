@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ldu0iu7keexa" path="res://assets/Tiles/decorative_cracks_floor.png" id="1_vh6ik"]
 [ext_resource type="Texture2D" uid="uid://c7iqxc7gosaxj" path="res://assets/Tiles/walls_floor.png" id="2_8vatb"]
 [ext_resource type="PackedScene" uid="uid://bkc7semstpwdo" path="res://scenes/Player.tscn" id="3_5ib45"]
-[ext_resource type="PackedScene" uid="uid://bsltaxaxjmsc8" path="res://scenes/box.tscn" id="4_7ook0"]
+[ext_resource type="PackedScene" uid="uid://bsltaxaxjmsc8" path="res://scenes/Objects/box.tscn" id="4_7ook0"]
 [ext_resource type="Texture2D" uid="uid://u6aniqghiy27" path="res://assets/Levels/level-1.png" id="5_n41lu"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_mx8sn"]
