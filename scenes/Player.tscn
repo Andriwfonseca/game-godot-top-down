@@ -18,8 +18,9 @@
 [ext_resource type="Texture2D" uid="uid://cweep0vqyoqd4" path="res://assets/Player/ATTACK_2/attack2_up.png" id="9_p07f3"]
 [ext_resource type="Texture2D" uid="uid://bns3acnvcl87t" path="res://assets/Player/RUN/run_up.png" id="9_srp4u"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5q5h1"]
-size = Vector2(12, 14)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jfpux"]
+radius = 5.0
+height = 12.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_im07a"]
 atlas = ExtResource("2_jfpux")
@@ -1007,8 +1008,8 @@ size = Vector2(4, 4)
 script = ExtResource("1_p0vlq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 12)
-shape = SubResource("RectangleShape2D_5q5h1")
+position = Vector2(0, 9)
+shape = SubResource("CapsuleShape2D_jfpux")
 debug_color = Color(0.492273, 0.583748, 1.92523e-07, 0.42)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

@@ -18,11 +18,11 @@ func update_attack_area_position() -> void:
 		"up":
 			attack_area.position = Vector2(0, -attack_offset)
 		"down":
-			attack_area.position = Vector2(0, attack_offset)
+			attack_area.position = Vector2(0, attack_offset - 5)
 		"left":
-			attack_area.position = Vector2(-attack_offset, 0)
+			attack_area.position = Vector2(-attack_offset +4, 0)
 		"right":
-			attack_area.position = Vector2(attack_offset, 0)
+			attack_area.position = Vector2(attack_offset -4, 0)
 
 func start_attack(base_anim: String) -> void:
 	attacking = true
