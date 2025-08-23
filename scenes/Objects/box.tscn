@@ -7,7 +7,7 @@
 size = Vector2(15, 15)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ks2v0"]
-size = Vector2(4, 4)
+size = Vector2(6, 6)
 
 [node name="Box" type="CharacterBody2D" groups=["boxes"]]
 z_index = 1
