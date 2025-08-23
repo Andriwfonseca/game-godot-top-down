@@ -21,6 +21,12 @@ func _ready() -> void:
 	print("Level Manager inicializado. Targets encontrados: ", targets.size())
 	print("Targets necessários para completar: ", target_quantity)
 
+	# Instancia o virtual joystick
+	var touch_controls_scene = preload("res://scenes/Game/touch_controls.tscn")
+	var touch_controls = touch_controls_scene.instantiate()
+	add_child(touch_controls)
+
+
 # Encontra todos os targets na cena
 func find_targets() -> void:
 	targets.clear()

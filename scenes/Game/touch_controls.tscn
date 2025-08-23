@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bp0xvp46sdfey"]
+
+[ext_resource type="PackedScene" uid="uid://cxw75hw27cfud" path="res://scenes/Game/virtual_joystick_scene.tscn" id="1_esavs"]
+[ext_resource type="Texture2D" uid="uid://batilrh8bchto" path="res://assets/Controls/shoot_stick_area.png" id="2_r5m1y"]
+
+[node name="TouchControls" type="CanvasLayer"]
+
+[node name="Virtual Joystick" parent="." instance=ExtResource("1_esavs")]
+modulate = Color(1, 1, 1, 0.392157)
+offset_left = 16.0
+offset_top = -66.0
+offset_right = 316.0
+offset_bottom = 234.0
+scale = Vector2(0.18, 0.18)
+
+[node name="ButtonAction" type="TouchScreenButton" parent="."]
+modulate = Color(1, 1, 1, 0.392157)
+position = Vector2(193, 172)
+scale = Vector2(0.290909, 0.290909)
+texture_normal = ExtResource("2_r5m1y")
+texture_pressed = ExtResource("2_r5m1y")
+action = "attack1"

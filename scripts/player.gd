@@ -36,7 +36,7 @@ func start_attack(base_anim: String) -> void:
 	anim.frame_changed.connect(Callable(self, "_on_attack_frame_changed"))
 
 func _on_attack_frame_changed() -> void:
-	# Se chegou no 4º frame (índice 3)
+	# Se chegou no 3º frame (índice 2)
 	if anim.frame == 2:
 		attacking = false
 		attack_area.monitoring = false
