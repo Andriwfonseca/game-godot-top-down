@@ -4,3 +4,5 @@
 
 [node name="Door" type="Sprite2D"]
 texture = ExtResource("1_vqt4l")
+centered = false
+offset = Vector2(0, -8)

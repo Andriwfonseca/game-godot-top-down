@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="game-godot-top-down"
-run/main_scene="uid://dsip705ck78mp"
+run/main_scene="uid://dghekvbg40kaf"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=258
 window/size/viewport_height=226
+window/size/mode=2
 window/stretch/mode="canvas_items"
 
 [input]

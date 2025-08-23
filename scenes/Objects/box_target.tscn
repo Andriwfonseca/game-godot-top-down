@@ -8,9 +8,11 @@ size = Vector2(14, 14)
 
 [node name="BoxTarget" type="Sprite2D"]
 texture = ExtResource("1_v1deh")
+centered = false
 script = ExtResource("2_13t0t")
 
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2(8, 8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_13t0t")

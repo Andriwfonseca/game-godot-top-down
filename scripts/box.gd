@@ -1,11 +1,20 @@
 extends CharacterBody2D
 
+@export var grid_size: float = 16.0
 @export var kick_speed: float = 250.0
+
 var move_direction: Vector2 = Vector2.ZERO
 var is_moving: bool = false
 
 func _ready() -> void:
 	add_to_group("boxes")
+
+# Função para alinhar posição na grid
+func align_to_grid(pos: Vector2) -> Vector2:
+	return Vector2(
+		round(pos.x / grid_size) * grid_size,
+		round(pos.y / grid_size) * grid_size
+	)
 
 # chamado pelo player quando ataca
 func kick(direction: Vector2) -> void:
@@ -29,12 +38,5 @@ func _physics_process(delta: float) -> void:
 				velocity = Vector2.ZERO
 				is_moving = false
 
-				# empurra 1px para o lado oposto da direção
-				if(move_direction.x > 0):
-					position.x = position.x - 1
-				elif(move_direction.x < 0):
-					position.x = position.x + 1
-				elif(move_direction.y > 0):
-					position.y = position.y - 1
-				elif(move_direction.y < 0):
-					position.y = position.y + 1
+				# Alinha a posição na grid
+				position = align_to_grid(position)

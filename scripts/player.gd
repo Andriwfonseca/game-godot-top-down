@@ -1,14 +1,14 @@
 extends CharacterBody2D
 
 @export var speed: float = 120.0
-@export var attack_offset: float = 16.0   # distância da hitbox em relação ao centro
+@export var attack_offset: float = 16.0 # distância da hitbox em relação ao centro
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var attack_area: Area2D = $AttackArea
 @onready var attack_shape: CollisionShape2D = $AttackArea/CollisionShape2D
 
 var last_direction: String = "down" # guarda última direção
-var attacking: bool = false         # trava o movimento enquanto ataca
+var attacking: bool = false # trava o movimento enquanto ataca
 
 var respawn_position: Vector2
 
@@ -20,9 +20,9 @@ func update_attack_area_position() -> void:
 		"down":
 			attack_area.position = Vector2(0, attack_offset - 5)
 		"left":
-			attack_area.position = Vector2(-attack_offset +4, 0)
+			attack_area.position = Vector2(-attack_offset + 4, 0)
 		"right":
-			attack_area.position = Vector2(attack_offset -4, 0)
+			attack_area.position = Vector2(attack_offset - 4, 0)
 
 func start_attack(base_anim: String) -> void:
 	attacking = true
@@ -47,7 +47,7 @@ func _on_attack_area_area_entered(area: Area2D) -> void:
 	var box: CharacterBody2D = null
 	var body = area.get_parent()
 
-	if body.is_in_group("boxes"):  # assume que Box tem grupo "boxes"
+	if body.is_in_group("boxes"): # assume que Box tem grupo "boxes"
 		box = body
 	elif body.get_parent() and body.get_parent().is_in_group("boxes"):
 		# caso body seja a Area2D interna (ColliderAttackArea)
@@ -66,8 +66,23 @@ func _on_attack_area_area_entered(area: Area2D) -> void:
 # ----------------- Ciclo de Vida -----------------
 func _ready() -> void:
 	attack_area.monitoring = false
-	attack_area.connect("area_entered", Callable(self, "_on_attack_area_area_entered"))	
+	attack_area.connect("area_entered", Callable(self, "_on_attack_area_area_entered"))
 	respawn_position = global_position # posição inicial
+
+	# Conecta ao signal do respawn
+	connect_to_respawn()
+
+func connect_to_respawn() -> void:
+	# Procura pela Area2D do respawn na cena
+	var respawn_area = get_tree().get_first_node_in_group("respawn_areas")
+	if respawn_area:
+		print("achou o respawn area por grupo", respawn_area)
+		respawn_area.body_entered.connect(Callable(self, "_on_respawn_area_body_entered"))
+	else:
+		# Fallback: procura por nome
+		var respawn_node = get_node_or_null("../respawn/Area2D")
+		if respawn_node:
+			respawn_node.body_entered.connect(Callable(self, "_on_respawn_area_body_entered"))
 
 # ----------------- Movimento -----------------
 func _physics_process(delta: float) -> void:
@@ -105,10 +120,9 @@ func _physics_process(delta: float) -> void:
 	update_attack_area_position()
 
 
-func _on_area_2d_body_entered(body: Node) -> void:
+func _on_respawn_area_body_entered(body: Node) -> void:
 	if body.is_in_group("player"):
 		var respawn_pos = global_position + Vector2(0, 2) # +2 no Y
 		print("Checkpoint ativado! Novo respawn:", respawn_pos)
 		body.respawn_position = respawn_pos
 		get_tree().reload_current_scene()
-	
