@@ -361,6 +361,7 @@ position = Vector2(32, 112)
 
 [node name="LevelManager" type="Node2D" parent="."]
 script = ExtResource("5_l3ydb")
+current_level = 3
 
 [node name="Player" parent="." groups=["player"] instance=ExtResource("6_gpjfk")]
 position = Vector2(128, 208)

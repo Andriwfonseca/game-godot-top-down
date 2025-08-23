@@ -37,7 +37,7 @@ func start_attack(base_anim: String) -> void:
 
 func _on_attack_frame_changed() -> void:
 	# Se chegou no 4º frame (índice 3)
-	if anim.frame == 3:
+	if anim.frame == 2:
 		attacking = false
 		attack_area.monitoring = false
 
